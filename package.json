@@ -1,5 +1,5 @@
 {
-  "name": "jessy-el-murr-2",
+  "name": "jessy-el-murr-react",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
     "dotenv": "^4.0.0",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "express-ejs-layouts": "^2.4.0",
+    "express-reverse": "^0.3.2",
     "faker": "^4.1.0",
     "http-errors": "~1.6.2",
     "json-schema-faker": "^0.5.0-rc15",

@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express')();
+require('express-reverse')(router);
+
 var BiographyController = require('../controllers/BiographyController');
 var VideosController = require('../controllers/VideosController');
 
-router.get('/biography/get',BiographyController.prototype.getFakeBiography) ;
-router.get('/videos/get',VideosController.prototype.getFakeVideos) ;
+router.get('biography_api','/biography/get',BiographyController.prototype.getFakeBiography) ;
+router.get('videos_api','/videos/get',VideosController.prototype.getFakeVideos) ;
 
 module.exports = router;

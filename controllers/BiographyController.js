@@ -6,7 +6,7 @@ class BiographyController {
 
     getFakeBiography(req,res){
         BiographyFaker.prototype.generateSchema();
-        BiographyFaker.prototype.printSchema(req,res);
+        BiographyFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
     }
 }
 

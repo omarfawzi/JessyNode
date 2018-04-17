@@ -1,20 +1,21 @@
 var jsf = require('json-schema-faker');
 
 jsf.extend('faker', function() {
-    var faker = require('faker');
-    faker.locale = "en_US";
-    return faker;
+    return require('faker');
 });
 
 class Faker {
+
     constructor(){
         this.schema = null;
     }
 
-     printSchema(req,res){
-         jsf.resolve(this.schema).then(function(result) {
-             res.send(result);
-         });
+    printSchema(){
+        return new Promise((resolve, reject) => {
+            jsf.resolve(this.schema).then(function(result) {
+                resolve(result);
+            });
+        });
     }
 }
 

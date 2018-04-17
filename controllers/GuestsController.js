@@ -6,7 +6,7 @@ class GuestsController {
 
     getFakeGuests(req,res){
         GuestsFaker.prototype.generateSchema();
-        GuestsFaker.prototype.printSchema(req,res);
+        GuestsFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
     }
 }
 

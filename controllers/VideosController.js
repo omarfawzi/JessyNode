@@ -6,7 +6,7 @@ class VideosController {
 
     getFakeVideos(req,res){
         VideosFaker.prototype.generateSchema();
-        VideosFaker.prototype.printSchema(req,res);
+        VideosFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
     }
 }
 

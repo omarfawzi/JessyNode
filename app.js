@@ -6,12 +6,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api');
-
 var app = express();
+var cors = require('cors');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,18 +21,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(cors({
+    'allowedHeaders': ['sessionId', 'Content-Type'],
+    'exposedHeaders': ['sessionId'],
+    'origin': '*',
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    'preflightContinue': false
+}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api',apiRouter);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// allow cors
-app.use(cors({origin: process.env.FRONT_HOST}));
 
 // error handler
 app.use(function(err, req, res, next) {

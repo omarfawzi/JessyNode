@@ -15,21 +15,22 @@ class BannerFaker extends Faker{
                   },
                   "name": {
                       "type": "string",
-                      "faker": "lorem.sentence"
+                      "faker": "name.findName"
                   },
-                  "bio": {
+                  "intro": {
                       "type": "string",
                       "faker": "lorem.paragraphs"
                   },
-                  "guest_job": {
+                  "job": {
                     "type": "string",
                     "faker": "name.jobTitle"
                   }
               },
               "required": [
                   "photo",
-                  "title",
-                  "bio"
+                  "name",
+                  "intro",
+                  "job"
               ]
           };
     }

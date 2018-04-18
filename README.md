@@ -1,5 +1,7 @@
 # Jessy-El-Murr
 A website built for the journalist JESSY EL MURR using MERN stack .
+# Demo
+Live Demo : https://jessyelmurr.herokuapp.com
 # Instructions
 1- git clone https://github.com/omarfawzi/Jessy-El-Murr <br>
 2- npm install <br>

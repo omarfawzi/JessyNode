@@ -1,7 +1,7 @@
 var jsf = require('json-schema-faker');
 
 jsf.extend('faker', function() {
-    return require('faker');
+    return require('faker/locale/en');
 });
 
 class Faker {

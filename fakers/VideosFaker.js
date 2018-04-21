@@ -10,6 +10,11 @@ class VideosFaker extends Faker{
             "type": "array",
             "properties": {
                 "video": {
+                    "id": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
                     "preview": {
                         "type": "string",
                         "faker": "image.image"

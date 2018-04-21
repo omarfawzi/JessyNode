@@ -33,7 +33,7 @@ class GuestsFaker extends Faker {
             "items": {
                 "$ref": "#/properties/guest"
             },
-            "minItems": 3
+            "minItems": 6
         };
     }
 }

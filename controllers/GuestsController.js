@@ -1,12 +1,18 @@
 var GuestsFaker = require('../fakers/GuestsFaker');
 
 class GuestsController {
-    constructor(){
+    constructor() {
     }
 
-    getFakeGuests(req,res){
+    getFakeGuests(req, res) {
         GuestsFaker.prototype.generateSchema();
-        GuestsFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
+        GuestsFaker.prototype.printSchema().then(function (result) {
+            let limit = parseInt(req.query.limit || result.length);
+            let offset = parseInt(req.query.offset || 0);
+            return result.slice(offset, limit + offset);
+        }, function (err) {
+            console.log(err);
+        }).then(res.send.bind(res));
     }
 }
 

@@ -37,6 +37,6 @@ class DailyTweetsFaker extends Faker{
             "minItems":6
         };
     }
-};
+}
 
 module.exports = DailyTweetsFaker;

@@ -1,13 +1,12 @@
-var BannerFaker = require('../fakers/BannerFaker');
+var Controller = require('./Controller');
 
-class BannerController {
+class BannerController extends Controller{
+
     constructor(){
+        super();
+        this.faker = 'Banner';
     }
 
-    getFakeBanner(req,res){
-        BannerFaker.prototype.generateSchema();
-        BannerFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
-    }
 }
 
 module.exports = BannerController;

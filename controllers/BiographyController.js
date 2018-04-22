@@ -1,13 +1,12 @@
-var BiographyFaker = require('../fakers/BiographyFaker');
+var Controller = require('./Controller');
 
-class BiographyController {
+class BiographyController extends Controller {
+
     constructor(){
+        super();
+        this.faker = 'Biography';
     }
 
-    getFakeBiography(req,res){
-        BiographyFaker.prototype.generateSchema();
-        BiographyFaker.prototype.printSchema().then(res.send.bind(res)).catch(console.error);
-    }
 }
 
 module.exports = BiographyController;

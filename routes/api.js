@@ -18,4 +18,8 @@ router.get('daily_tweets_api','/dailyTweets/get',(res,req) => {
     new ControllerFactory().getController('DailyTweets').getFakeData(res,req);
 }) ;
 
+router.get('testimonials_api','/testimonials/get',(res,req) => {
+    new ControllerFactory().getController('Testimonials').getFakeData(res,req);
+}) ;
+
 module.exports = router;

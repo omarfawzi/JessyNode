@@ -15,7 +15,7 @@ class BiographyFaker extends Faker{
                 },
                 "title": {
                     "type": "string",
-                    "faker": "lorem.sentence"
+                    "faker": "name.findName"
                 },
                 "bio": {
                     "type": "string",

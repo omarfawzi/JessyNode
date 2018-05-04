@@ -11,7 +11,7 @@ class Controller {
         FakerFactory.prototype.getFaker(this.faker).prototype.printSchema().then(function (result) {
             let limit = parseInt(req.query.limit || result.length);
             let offset = parseInt(req.query.offset || 0);
-            return (typeof result === 'object') ? result : result.slice(offset, limit + offset);
+            return Array.isArray(result) ? result.slice(offset, limit + offset) : result ;
         }, function (err) {
             console.log(err);
         }).then(res.send.bind(res));

@@ -34,7 +34,7 @@ class DailyTweetsFaker extends Faker{
             "items": {
                 "$ref": "#/properties/video"
             },
-            "maxItems":6
+            "minItems":6
         };
     }
 }

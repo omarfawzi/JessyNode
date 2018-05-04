@@ -18,7 +18,7 @@ class DailyTweetsFaker extends Faker{
                     },
                     "preview": {
                         "type": "string",
-                        "faker": "image.image"
+                        "faker": "image.avatar"
                     },
                     "title": {
                         "type": "string",
@@ -34,7 +34,7 @@ class DailyTweetsFaker extends Faker{
             "items": {
                 "$ref": "#/properties/video"
             },
-            "minItems":6
+            "maxItems":6
         };
     }
 }

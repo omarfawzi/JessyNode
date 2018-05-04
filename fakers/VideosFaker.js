@@ -17,7 +17,7 @@ class VideosFaker extends Faker{
                     },
                     "preview": {
                         "type": "string",
-                        "faker": "image.image"
+                        "faker": "image.avatar"
                     },
                     "title": {
                         "type": "string",

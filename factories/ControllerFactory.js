@@ -5,6 +5,7 @@ var GalleryController = require('../Controllers/GalleryController');
 var GuestsController = require('../Controllers/GuestsController');
 var TestimonialsController = require('../Controllers/TestimonialsController');
 var VideosController = require('../Controllers/VideosController');
+var SubscribeController = require('../Controllers/SubscribeController');
 
 class ControllerFactory {
 
@@ -28,6 +29,8 @@ class ControllerFactory {
                 return new TestimonialsController();
             case 'Videos':
                 return new VideosController();
+            case 'Subscribe':
+                return new SubscribeController();
             default:
                 return null;
         }

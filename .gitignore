@@ -59,4 +59,4 @@ typings/
 /.idea
 
 # local files
-subscription.json
+/subscription.json

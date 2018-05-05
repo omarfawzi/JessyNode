@@ -23,7 +23,7 @@ class BannerFaker extends Faker{
                 },
                 "brief": {
                     "type": "string",
-                    "faker": "lorem.paragraphs"
+                    "faker": "lorem.paragraph"
                 }
             },
             "required": [

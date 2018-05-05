@@ -26,6 +26,10 @@ router.get('testimonials_api','/testimonials/get',(res,req) => {
     new ControllerFactory().getController('Testimonials').getFakeData(res,req);
 }) ;
 
+router.get('gallery_api','/gallery/get',(res,req) => {
+    new ControllerFactory().getController('Gallery').getFakeData(res,req);
+}) ;
+
 router.post('subscribe_api','/subscribe/post',new ControllerFactory().getController('Subscribe').subscribe);
 
 module.exports = router;

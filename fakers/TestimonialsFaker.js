@@ -10,6 +10,11 @@ class TestimonialsFaker extends Faker {
       "type": "array",
       "properties": {
         "testimonial": {
+		  "id": {
+            "type": "integer",
+            "minimum": 0,
+			"maximum": 100
+          },
           "photo": {
             "type": "string",
             "faker": "image.avatar"

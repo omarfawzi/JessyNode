@@ -27,7 +27,7 @@ class TestimonialsFaker extends Faker {
       "items": {
           "$ref": "#/properties/testimonial"
       },
-      "minItems": 3
+      "minItems": 6
     };
   }
 

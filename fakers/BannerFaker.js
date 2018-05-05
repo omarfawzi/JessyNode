@@ -7,33 +7,34 @@ class BannerFaker extends Faker{
 
     generateSchema(){
         this.schema = {
-              "type": "object",
-              "properties": {
-                  "photo":{
-                      "type":"string",
-                      "faker" : "image.avatar"
-                  },
-                  "name": {
-                      "type": "string",
-                      "faker": "name.findName"
-                  },
-                  "intro": {
-                      "type": "string",
-                      "faker": "lorem.paragraphs"
-                  },
-                  "job": {
-                    "type": "string",
+            "type": "object",
+            "properties": {
+                "photo":{
+                    "type":"string",
+                    "faker" : "image.avatar"
+                },
+                "job":{
+                    "type":"string",
                     "faker": "name.jobTitle"
-                  }
-              },
-              "required": [
-                  "photo",
-                  "name",
-                  "intro",
-                  "job"
-              ]
-          };
+                },
+                "name": {
+                    "type": "string",
+                    "faker": "name.findName"
+                },
+                "brief": {
+                    "type": "string",
+                    "faker": "lorem.paragraphs"
+                }
+            },
+            "required": [
+                "photo",
+                "name",
+                "brief",
+                "job"
+            ]
+        };
     }
-  }
+
+}
 
 module.exports = BannerFaker;
